@@ -1,0 +1,14 @@
+@import "./src/styles/global.css";
+@import "./src/styles/projects.css";
+@import "./src/styles/skills.css";
+@import "./src/styles/contact.css";
+@import "./src/styles/hero.css";
+
+main {
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+section {
+  padding:60px 0;
+}

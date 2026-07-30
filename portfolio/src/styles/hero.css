@@ -1,0 +1,13 @@
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-button span {
+  transition: transform .2s ease;
+}
+
+.hero-button:hover span {
+  transform: translateX(4px);
+}

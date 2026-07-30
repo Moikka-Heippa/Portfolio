@@ -1,0 +1,41 @@
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 48px;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 40px;
+}
+
+.contact-icons a {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  color: var(--text);
+
+  font-size: 2rem;
+
+  transition: var(--transition);
+}
+
+.contact-icons a:hover {
+  color: var(--primary);
+
+  transform: translateY(-6px);
+
+  box-shadow: var(--shadow);
+}

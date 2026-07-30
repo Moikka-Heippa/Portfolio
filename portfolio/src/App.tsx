@@ -1,35 +1,25 @@
-import { FaGithub, FaYoutube } from "react-icons/fa"
+import "./App.css";
+
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Hero from "./components/Hero";
 
 function App() {
-
   return (
-    <div>
-      <h1>Moikka-Heippa Portfolio</h1>
-      <h2>Profile</h2>
-      <p>
-        Engineer / Researcher / Creator
-      </p>
+    <main>
+      <Hero />
 
-      <h2>Engineer</h2>
-      <h3>Projects</h3>
+      <About />
 
-      <h2>Business</h2>
-      <h3>Projects</h3>
+      <Skills />
 
-      <h2>Creative</h2>
-      <h3>Projects</h3>
+      <Projects />
 
-      <a href="https://github.com/Moikka-Heippa">
-        <FaGithub size={40}/>
-      </a>
-
-      <a href="https://www.youtube.com/@Moikka-Heippa">
-        <FaYoutube size={40}/>
-      </a>
-
-    </div>
-  )
+      <Contact />
+    </main>
+  );
 }
 
-
-export default App
+export default App;
