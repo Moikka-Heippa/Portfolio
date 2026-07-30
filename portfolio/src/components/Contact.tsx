@@ -11,7 +11,7 @@ export default function Contact() {
     <section id="contact">
       <div className="contact-icons">
         <a
-          href="mailto:moikka.heippa.dev@email.com"
+          href="mailto:moikka.heippa.dev@gmail.com"
           target="_blank"
           rel="noreferrer"
         >
