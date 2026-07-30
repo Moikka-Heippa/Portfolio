@@ -1,101 +1,117 @@
 import type { Project } from "../types/projects";
 
-interface Props {
+type Props = {
   project: Project;
-}
+  onClick?: (project: Project) => void;
+};
+
 
 export default function ProjectCard({
-  project
+  project,
+  onClick,
 }: Props) {
 
   return (
 
-    <article className="project-card">
+    <article
+      className="project-card"
+      onClick={() => onClick?.(project)}
+    >
 
-      <div className="project-header">
+
+      {/* Demo link */}
+
+      <a
+        className="project-image"
+        href={project.demo}
+        target="_blank"
+        rel="noopener noreferrer"
+
+        onClick={(e)=>{
+          e.stopPropagation();
+        }}
+      >
+
+        <img
+          src={project.image}
+          alt={project.title}
+        />
+
+      </a>
+
+
+
+      <div className="project-content">
+
 
         <h3>
-
           {project.title}
-
         </h3>
 
-        <div className="project-tags">
 
-          {project.tags.map(tag => (
+        <p>
+          {project.description}
+        </p>
 
-            <span
-              key={tag}
-              className="tag"
-            >
 
-              {tag}
 
-            </span>
+        <div className="project-skills">
 
-          ))}
+          {
+            project.skills.map(skill => (
+
+              <span
+                key={skill.id}
+              >
+                {skill.name}
+              </span>
+
+            ))
+          }
 
         </div>
 
-      </div>
 
-      <p className="project-description">
 
-        {project.description}
+        <div className="project-footer">
 
-      </p>
 
-      <div className="project-skills">
-
-        {project.skills.map(skill => (
-
-          <span
-            key={skill.name}
-            className="skill-chip"
-          >
-
-            {skill.name}
-
+          <span>
+            {project.category}
           </span>
 
-        ))}
+
+
+          {
+            project.github && (
+
+              <a
+                className="github-link"
+
+                href={project.github}
+
+                target="_blank"
+
+                rel="noopener noreferrer"
+
+                onClick={(e)=>{
+                  e.stopPropagation();
+                }}
+              >
+                GitHub →
+              </a>
+
+            )
+          }
+
+
+        </div>
+
 
       </div>
 
-      <div className="project-links">
-
-        {project.github && (
-
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-
-            GitHub →
-
-          </a>
-
-        )}
-
-        {project.demo && (
-
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noreferrer"
-          >
-
-            Demo →
-
-          </a>
-
-        )}
-
-      </div>
 
     </article>
 
   );
-
 }

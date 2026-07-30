@@ -9,16 +9,21 @@ export const projects: Project[] = [
     description:
       "Personal portfolio website built with React.",
 
+    image: "/images/projects/portfolio.png",
+
     skills: [
       {
+        id: "react",
         name: "React",
         category: "Frontend",
       },
       {
+        id: "typescript",
         name: "TypeScript",
         category: "Frontend",
       },
       {
+        id: "css",
         name: "CSS",
         category: "Frontend",
       },
@@ -26,6 +31,10 @@ export const projects: Project[] = [
 
     tags: ["Web"],
 
-    github: "...",
+    category: "Frontend",
+
+    github: "https://github.com/Moikka-Heippa/portfolio",
+
+    demo: "https://example.com",
   },
 ];
