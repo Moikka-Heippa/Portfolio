@@ -1,4 +1,4 @@
-import "../styles/contact.css";
+import "../styles/Contact.css";
 
 import {
   FaEnvelope,
