@@ -21,25 +21,14 @@ export default function ProjectCard({
 
       {/* Demo link */}
 
-      <a
-        className="project-image"
-        href={project.demo}
-        target="_blank"
-        rel="noopener noreferrer"
-
-        onClick={(e)=>{
-          e.stopPropagation();
-        }}
-      >
+      <div className="project-image">
 
         <img
           src={project.image}
           alt={project.title}
         />
 
-      </a>
-
-
+      </div>
 
       <div className="project-content">
 

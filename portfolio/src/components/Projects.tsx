@@ -46,7 +46,7 @@ export default function Projects() {
 
       </div>
 
-
+        console.log("selectedProject:", selectedProject);
 
       <ProjectModal
 

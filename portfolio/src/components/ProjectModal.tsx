@@ -1,13 +1,13 @@
 import { useEffect } from "react";
-
+import { ExternalLink } from "lucide-react";
 import type { Project } from "../types/projects";
 
+import "../styles/projectmodal.css";
+
+
 type Props = {
-
   project: Project | null;
-
   onClose: () => void;
-
 };
 
 
@@ -17,18 +17,12 @@ export default function ProjectModal({
 }: Props) {
 
 
-  // ESCで閉じる
-
   useEffect(() => {
 
-    const handleKeyDown = (
-      e: KeyboardEvent
-    ) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
 
-      if(e.key === "Escape"){
-
+      if (e.key === "Escape") {
         onClose();
-
       }
 
     };
@@ -49,12 +43,27 @@ export default function ProjectModal({
 
     };
 
-
-  },[onClose]);
-
+  }, [onClose]);
 
 
-  if(!project) return null;
+
+  useEffect(() => {
+
+    document.body.style.overflow =
+      project ? "hidden" : "";
+
+
+    return () => {
+
+      document.body.style.overflow = "";
+
+    };
+
+  }, [project]);
+
+
+
+  if (!project) return null;
 
 
 
@@ -62,23 +71,18 @@ export default function ProjectModal({
 
     <div
       className="modal-overlay"
-
       onClick={onClose}
     >
 
 
       <div
         className="project-modal"
-
-        onClick={(e)=>
-          e.stopPropagation()
-        }
+        onClick={(e)=>e.stopPropagation()}
       >
 
 
         <button
           className="modal-close"
-
           onClick={onClose}
         >
           ×
@@ -86,14 +90,50 @@ export default function ProjectModal({
 
 
 
-        <img
-          className="modal-image"
+        {
+          project.demo ? (
 
-          src={project.image}
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="modal-image-wrapper"
+            >
 
-          alt={project.title}
+              <img
+                src={project.image}
+                alt={project.title}
+                className="modal-image"
+              />
 
-        />
+
+              <div className="modal-image-overlay">
+
+                <ExternalLink size={18}/>
+
+                <span>
+                  Open Live Demo
+                </span>
+
+              </div>
+
+
+            </a>
+
+          ) : (
+
+            <div className="modal-image-wrapper">
+
+              <img
+                src={project.image}
+                alt={project.title}
+                className="modal-image"
+              />
+
+            </div>
+
+          )
+        }
 
 
 
@@ -105,7 +145,8 @@ export default function ProjectModal({
           </h2>
 
 
-          <p>
+
+          <p className="modal-description">
             {project.description}
           </p>
 
@@ -114,10 +155,11 @@ export default function ProjectModal({
           <div className="modal-skills">
 
             {
-              project.skills.map(skill => (
+              project.skills.map(skill=>(
 
                 <span
                   key={skill.id}
+                  className="skill-pill"
                 >
                   {skill.name}
                 </span>
@@ -129,7 +171,8 @@ export default function ProjectModal({
 
 
 
-          <div className="modal-links">
+
+          <div className="modal-actions">
 
 
             {
@@ -137,12 +180,13 @@ export default function ProjectModal({
 
                 <a
                   href={project.github}
-
                   target="_blank"
-
                   rel="noopener noreferrer"
+                  className="github-button"
                 >
+
                   GitHub
+
                 </a>
 
               )
@@ -155,12 +199,15 @@ export default function ProjectModal({
 
                 <a
                   href={project.demo}
-
                   target="_blank"
-
                   rel="noopener noreferrer"
+                  className="demo-button"
                 >
-                  Demo
+
+                  <ExternalLink size={18}/>
+
+                  Live Demo
+
                 </a>
 
               )
