@@ -10,6 +10,15 @@
   --transition: .25s ease;
 }
 
+[data-theme="dark"] {
+ --bg:#0f172a;
+ --surface:#1e293b;
+ --text:#f8fafc;
+ --text-light:#94a3b8;
+ --border:#334155;
+ --shadow:0 8px 24px rgba(0,0,0,.4);
+}
+
 *{
     margin:0;
     padding:0;
@@ -83,5 +92,30 @@ section {
     margin-bottom:32px;
 
   }
+
+}
+
+body {
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  transition:
+    background .3s ease,
+    color .3s ease;
+
+}
+
+.project-card,
+.about-card,
+.skill-card,
+.project-modal{
+
+  transition:
+    background .3s ease,
+    border-color .3s ease,
+    color .3s ease,
+    transform .25s ease;
 
 }

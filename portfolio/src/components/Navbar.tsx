@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useScrollSpy } from "../hooks/useScrollSpy";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   {
@@ -86,6 +87,8 @@ export default function Navbar() {
             </a>
 
           ))}
+
+          <ThemeToggle/>
 
         </nav>
 
