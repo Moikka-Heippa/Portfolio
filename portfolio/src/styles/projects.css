@@ -151,3 +151,56 @@
     text-decoration:underline;
 
 }
+
+.project-filter{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:40px;
+
+}
+
+
+.project-filter button{
+
+    border:none;
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    border:1px solid var(--border);
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+
+.project-filter button:hover{
+
+    color:var(--primary);
+
+    border-color:var(--primary);
+
+}
+
+
+.project-filter button.active{
+
+    background:var(--primary);
+
+    color:white;
+
+    border-color:var(--primary);
+
+}
