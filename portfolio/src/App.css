@@ -1,12 +1,12 @@
-@import "./src/styles/global.css";
-@import "./src/styles/projects.css";
-@import "./src/styles/skills.css";
-@import "./src/styles/contact.css";
-@import "./src/styles/hero.css";
-@import "./src/styles/navbar.css";
-@import "./src/styles/ProjectCard.css";
-@import "./src/styles/projectmodal.css";
-@import "./src/styles/ThemeToggle.css";
+@import "./styles/global.css";
+@import "./styles/projects.css";
+@import "./styles/skills.css";
+@import "./styles/contact.css";
+@import "./styles/hero.css";
+@import "./styles/navbar.css";
+@import "./styles/ProjectCard.css";
+@import "./styles/projectmodal.css";
+@import "./styles/ThemeToggle.css";
 
 main {
   width: min(1100px, calc(100% - 48px));
