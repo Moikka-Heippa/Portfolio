@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import "../styles/skills.css";
+import "../styles/Skills.css";
 
 import { getSkillStats } from "../utils/skill";
 import type { SkillCategory } from "../types/skills";
