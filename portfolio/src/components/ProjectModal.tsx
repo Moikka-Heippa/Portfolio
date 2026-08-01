@@ -2,9 +2,6 @@ import { useEffect } from "react";
 
 import type { Project } from "../types/projects";
 
-import "./ProjectModal.css";
-
-
 type Props = {
 
   project: Project | null;

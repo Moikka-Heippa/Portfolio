@@ -53,3 +53,35 @@ section h2{
 .section-description{
     color:var(--text-light);
 }
+
+/* section common */
+
+section {
+
+  max-width:1200px;
+
+  margin:0 auto;
+
+  padding:120px 32px;
+
+}
+
+
+@media(max-width:768px){
+
+  section {
+
+    padding:80px 20px;
+
+  }
+
+
+  section h2 {
+
+    font-size:1.6rem;
+
+    margin-bottom:32px;
+
+  }
+
+}

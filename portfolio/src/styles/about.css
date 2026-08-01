@@ -150,3 +150,21 @@
   }
 
 }
+
+@media(max-width:768px){
+
+  .about-container {
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .about-card {
+
+    padding:24px;
+
+  }
+
+
+}

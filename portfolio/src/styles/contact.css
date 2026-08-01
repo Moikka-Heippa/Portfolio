@@ -39,3 +39,15 @@
 
   box-shadow: var(--shadow);
 }
+
+@media(max-width:768px){
+
+  .contact-icons {
+
+    justify-content:center;
+
+    gap:24px;
+
+  }
+
+}

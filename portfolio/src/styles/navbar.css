@@ -175,3 +175,34 @@
   }
 
 }
+
+@media(max-width:768px){
+
+  .navbar-container {
+
+    padding:16px 20px;
+
+  }
+
+
+  .navbar nav {
+
+    gap:16px;
+
+  }
+
+
+  .navbar nav a {
+
+    font-size:.8rem;
+
+  }
+
+
+  .navbar-logo {
+
+    font-size:1.1rem;
+
+  }
+
+}

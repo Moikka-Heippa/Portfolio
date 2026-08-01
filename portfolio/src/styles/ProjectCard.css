@@ -87,6 +87,23 @@
 
 }
 
+@media(max-width:768px){
+
+  .project-content {
+
+    padding:20px;
+
+  }
+
+
+  .project-content h3 {
+
+    font-size:1.1rem;
+
+  }
+
+}
+
 
 .project-content p {
 

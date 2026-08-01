@@ -39,6 +39,36 @@
 
 }
 
+@media(max-width:768px){
+
+  .modal-overlay {
+
+    padding:12px;
+
+  }
+
+
+  .modal-content {
+
+    padding:20px;
+
+  }
+
+
+  .modal-links {
+
+    flex-direction:column;
+
+  }
+
+
+  .modal-links a {
+
+    text-align:center;
+
+  }
+
+}
 
 
 .modal-close {
