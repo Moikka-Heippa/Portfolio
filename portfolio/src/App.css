@@ -1,12 +1,12 @@
 @import "./styles/global.css";
 @import "./styles/projects.css";
-@import "./styles/skills.css";
+@import "./styles/Skills.css";
 @import "./styles/contact.css";
 @import "./styles/hero.css";
 @import "./styles/navbar.css";
 @import "./styles/ProjectCard.css";
 @import "./styles/projectmodal.css";
-@import "./styles/themetoggle.css";
+@import "./styles/ThemeToggle.css";
 
 main {
   width: min(1100px, calc(100% - 48px));

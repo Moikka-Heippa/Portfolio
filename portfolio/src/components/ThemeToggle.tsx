@@ -1,6 +1,6 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "../hooks/useTheme";
-import "../styles/themetoggle.css";
+import "../styles/ThemeToggle.css";
 
 export default function ThemeToggle() {
 
