@@ -17,11 +17,13 @@
 
 .navbar.scrolled {
 
-  background: rgba(255,255,255,0.85);
+    background:var(--nav-bg);
 
-  backdrop-filter: blur(12px);
+    box-shadow:var(--shadow);
 
-  border-bottom: 1px solid var(--border);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid var(--border);
 
 }
 
