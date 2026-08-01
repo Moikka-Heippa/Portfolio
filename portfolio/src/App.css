@@ -6,7 +6,7 @@
 @import "./styles/navbar.css";
 @import "./styles/ProjectCard.css";
 @import "./styles/projectmodal.css";
-@import "./styles/ThemeToggle.css";
+@import "./styles/themetoggle.css";
 
 main {
   width: min(1100px, calc(100% - 48px));
