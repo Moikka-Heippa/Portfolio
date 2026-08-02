@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { ExternalLink } from "lucide-react";
 import type { Project } from "../types/projects";
 
-import "../styles/projectmodal.css";
+//import "../styles/projectmodal.css";
 
 
 type Props = {
